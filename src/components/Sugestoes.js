@@ -14,20 +14,20 @@ function Sugestao(props){
 }
 
 export default function Sugestoes(){
-  const sugestando = [
-    {name: "bad.vibes.memes", image: "/assets/img/bad.vibes.memes.svg", reason: "Segue você"},
-    {name: "chibirdart", image: "assets/img/chibirdart.svg", reason: "Segue você"},
-    {name: "razoesparaacreditar", image: "assets/img/razoesparaacreditar.svg", reason: "Novo no Instagram"},
-    {name: "adorable_animals", image: "assets/img/adorable_animals.svg", reason: "Segue você"},
-    {name: "smallcutecats", image: "assets/img/smallcutecats.svg", reason: "Segue você"}
+  const Sugestoes = [
+    {name: "bad.vibes.memes", image:"assets/img/bad.vibes.memes.svg", reason: "Segue você"},
+    {name: "chibirdart", image:"assets/img/chibirdart.svg", reason: "Segue você"},
+    {name: "razoesparaacreditar", image:"assets/img/razoesparaacreditar.svg", reason: "Novo no Instagram"},
+    {name: "adorable_animals", image:"assets/img/adorable_animals.svg", reason: "Segue você"},
+    {name: "smallcutecats", image:"assets/img/smallcutecats.svg", reason: "Segue você"}
   ]
   return(<div class="sugestoes">
   <div class="titulo">
       Sugestões para você
       <div>Ver tudo</div>
   </div>
-  
-  {sugestando.map((sus) => <Sugestao name={sus.name} image={sus.image} reason={sus.reason} alt={sus.text}/>)}
-  
+  <div class="usuario">
+  {Sugestoes.map((sus) => <Sugestao name={sus.name} image={sus.image} reason={sus.reason} alt={sus.text}/>)}
+  </div>
 </div>)
 }
