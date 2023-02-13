@@ -1,79 +1,35 @@
+function Story(props){
+    return(
+        <div class="story">
+            <div class="imagem">
+              <img src={props.image} alt={props.text}/>
+            </div>
+            <div class="usuario">
+              {props.name}
+            </div>
+          </div>
+    )
+}
+
 export default function Stories(){
-    return(<div class="stories">
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/9gag.svg" alt="9gag"/>
-      </div>
-      <div class="usuario">
-        9gag
-      </div>
-    </div>
+  const Stories = [
+    {name: "9gag" , image: "assets/img/9gag.svg"},
+    {name: "meowed" , image: "assets/img/meowed.svg"},
+    {name: "barked" , image: "assets/img/barked.svg"},
+    {name: "nathanwpylestrangeplanet" , image: "assets/img/nathanwpylestrangeplanet.svg"},
+    {name: "wawawicomics" , image: "assets/img/wawawicomics.svg"},
+    {name: "respondeai" , image: "assets/img/respondeai.svg"},
+    {name: "filomoderna" , image: "assets/img/filomoderna.svg"},
+    {name: "memeriagourmet" , image: "assets/img/memeriagourmet.svg"}
+  ]
 
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/meowed.svg" alt="meowed"/>
-      </div>
-      <div class="usuario">
-        meowed
-      </div>
-    </div>
+  return(
+    <div class = "stories">
+      {Stories.map((sto) => <Story name={sto.name} image={sto.image} alt={sto.text}/>)}
 
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/barked.svg" alt="barked"/>
-      </div>
-      <div class="usuario">
-        barked
-      </div>
+      <div class="setinha">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
+          </div>
     </div>
-
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-      </div>
-      <div class="usuario">
-        nathanwpylestrangeplanet
-      </div>
-    </div>
-
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-      </div>
-      <div class="usuario">
-        wawawicomics
-      </div>
-    </div>
-
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/respondeai.svg" alt="respondeai"/>
-      </div>
-      <div class="usuario">
-        respondeai
-      </div>
-    </div>
-
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-      </div>
-      <div class="usuario">
-        filomoderna
-      </div>
-    </div>
-
-    <div class="story">
-      <div class="imagem">
-        <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-      </div>
-      <div class="usuario">
-        memeriagourmet
-      </div>
-    </div>
-
-    <div class="setinha">
-      <ion-icon name="chevron-forward-circle"></ion-icon>
-    </div>
-  </div>)
+  )
 }
